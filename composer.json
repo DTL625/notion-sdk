@@ -1,0 +1,48 @@
+{
+    "name": "dtl625/notion-api",
+    "description": "notion api fork from 5am-code/laravel-notion-api",
+    "authors": [
+        {
+            "name": "DTL",
+            "email": "watshing625@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DTL\\NotionApi\\": "src",
+            "DTL\\NotionApi\\Exceptions\\": "src/Exceptions",
+            "DTL\\NotionApi\\Endpoints\\": "src/Endpoints"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DTL\\NotionApi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DTL\\NotionApi\\LaravelNotionApiServiceProvider"
+            ],
+            "aliases": {
+                "Notion": "DTL\\NotionApi\\NotionFacade"
+            }
+        }
+    }
+}
