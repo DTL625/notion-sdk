@@ -9,5 +9,19 @@ return [
     /**
      * Your Notion API token.
      */
-    'notion-api-token' => env('NOTION_API_TOKEN', ''),
+    'api-token' => env('NOTION_API_TOKEN', ''),
+
+    /**
+     * Your database list
+     */
+    'database' => [
+
+    ],
+
+    /**
+     * Your database list
+     */
+    'pages' => [
+
+    ],
 ];
